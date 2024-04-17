@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <h1 id="d1"></h1>
+    
+        <body>
+         <button onclick="inc()">increement</button>
+         <button onclick="dec()">decreement</button>
+         <button onclick="res()">reset</button>
+         
+         <script> 
+        
+
+         var a=1
+        var a=document.getElementById("d1").innerHTML=a;
+        
+           function inc(){
+            a++;
+    
+            document.getElementById("d1").innerHTML=a
+             
+
+           }
+           function dec(){
+            a--;
+            document.getElementById("d1").innerHTML=a
+
+           }
+           function res(){
+            a=0;
+            document.getElementById("d1").innerHTML=a
+           }
+          
+            
+         </script>
+
+        </body>
+    </head>
+</html>

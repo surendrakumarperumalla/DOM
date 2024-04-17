@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <table class="" width="100%"  border="1px" height="500px" >
+            <thead class="bg-primary">
+                <th rowspan="2">id</th>
+                <th id="tl" rowspan="2">title</th>
+                <th rowspan="2">category</th>
+                <th rowspan="2">description</th>
+                <th rowspan="2">image</th>
+                <th id="pr" rowspan="2">price</th> 
+                <th colspan="2">rating</th>
+                </thead>
+             
+           
+            <tbody  id="d1" class="bg-danger">
+                         
+
+            </tbody>
+        </table>
+        <script>
+            // axios.get("https://restcountries.com/v3.1/all").then(function(resp){
+            //     console.log(resp)
+            //  })
+            // axios.get("https://dog.ceo/api/breeds/list/all").then(function(resp){
+            //     console.log(resp.data.message)
+            // })
+                
+              var products;
+              var sortr=false;
+             
+            axios.get("https://fakestoreapi.com/products").then(function(resp){
+                console.log(resp)
+                products=resp.data
+                incr()
+            })
+            function incr(){
+                document.getElementById("d1").innerHTML=" "
+                products.forEach(function(h){
+                    var ntr=document.createElement("tr")
+
+                    var gtd=document.createElement("td")
+                     gtd.innerHTML=h.id
+                     ntr.appendChild(gtd)
+                     
+                     var ttd=document.createElement("td")
+                     ttd.innerHTML=h.title
+                     ntr.appendChild(ttd)
+
+                     var ctd=document.createElement("td")
+                     ctd.innerHTML=h.category
+                     ntr.appendChild(ctd)
+
+                     var dtd=document.createElement("td")
+                     dtd.innerHTML=h.description
+                     ntr.appendChild(dtd)
+
+                     var itd=document.createElement("td")
+                     var img=document.createElement("img")
+                     img.src=h.image
+                     img.style.width="100%"
+                     ntr.appendChild(itd)
+                     itd.appendChild(img)
+
+                      var ptd=document.createElement("td")
+                      ptd.innerHTML=h.price
+                      ntr.appendChild(ptd)
+
+                      var rtd=document.createElement("td")
+                      rtd.innerHTML=h.rating.rate
+                      ntr.appendChild(rtd)
+
+                       var htd=document.createElement("td")
+                       htd.innerHTML=h.rating.count
+                       ntr.appendChild(htd)
+
+              
+
+
+                      document.getElementById("d1").appendChild(ntr)
+                    })
+            
+            }
+            document.getElementById("pr").onclick=function(){
+                products.sort(function(x,y){
+                    if(x.price<y.price){
+                        return  sortr ? 1 : -1
+                    }
+                    else{
+                        return sortr ? -1: 1  
+                    }
+                })
+                incr()
+                sortr=!sortr
+            }
+           
+               
+        
+           
+
+
+        </script>
+
+    </body>
+</html>

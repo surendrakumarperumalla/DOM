@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+    <body>
+        
+        <h1 style="color: blueviolet;text-align: center;">toggle button to show true/false</h1>
+        <div   style="text-align: center;">
+            <button  id="d1"  onclick="show()" >toggle</button><span id="s1"></span>
+            <h3 id="hh"></h3>
+        </div>
+           <script>
+            var a=["true","false"]
+          
+                var i=0;
+            var x=document.getElementById("d1")
+            x.style.backgroundColor="red"
+
+            var sur=document.getElementById("hh") 
+            var dra=document.querySelector("#s1")
+              function show(){
+                if(i==a.length-1)
+                {
+                    i=0;
+                    dra.innerHTML=a[i]
+                }
+                else{
+                    i++;
+                    dra.innerHTML=a[i]
+                }
+              }
+
+
+
+        
+
+               
+
+
+
+
+           
+
+
+            
+
+           
+            
+
+
+        </script>
+    </body>
+</html>

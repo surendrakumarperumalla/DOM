@@ -1,0 +1,92 @@
+<html>
+    <head></head>
+    <body>
+        <div style="display: flex;">
+        <h1 id="d1"></h1>
+        <h1 id="d2"></h1>
+        <h1 id="d3"></h1>
+        </div>
+        <button id="d4" onclick="start()">start</button>
+        <button id="d5" onclick="stop()">stop</button>
+        <button id="d6" onclick="reset()">reset</button>
+       
+        <script>
+             
+               var m=1;
+             var s=1;
+             var t1;
+             var t2;
+             var t3;
+             var h=1;
+          
+            function start(){
+                document.getElementById("d4").disabled=true
+                    document.getElementById("d5").disabled=false
+                  t1=setInterval(function(){
+                   
+                   
+                    document.getElementById("d1").innerHTML=h+"h"+":"
+                    h=h+1;
+                    if(h==24){
+                        h=1
+                    }
+
+                  },3600000)
+                t2=setInterval(function(){     
+                document.getElementById("d2").innerHTML=m+"m"+":"
+                       m=m+1;
+                       if(m==60){
+                        m=1;
+                       }
+
+                    },60000)
+
+                 t3=setInterval(function(){
+                    document.getElementById("d3").innerHTML=s+"s"+":"
+                    s=s+1;
+                    if(s==60)
+                    {
+                        s=0;
+                    }
+                 },1000)
+                }
+
+            
+             function stop(){
+                document.getElementById("d4").disabled=false
+                document.getElementById("d5").disabled=true
+                   
+                clearInterval(t1)
+                clearInterval(t2)
+                clearInterval(t3)
+ 
+
+
+            }
+            function reset(){
+                clearInterval(t1)
+                h=0;
+                document.getElementById("d1").innerHTML=h;
+
+                clearInterval(t2)
+                m=0;
+                document.getElementById("d2").innerHTML=m;
+                clearInterval(t3)
+                s=0;
+                document.getElementById("d2").innerHTML=s;
+                
+
+
+              
+              
+            
+            }
+
+           
+              
+            
+
+            
+        </script>
+    </body>
+</html>

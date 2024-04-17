@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <div   class="d-flex">
+    <ul id="d1"  style="background-color: rgb(16, 127, 239); ">
+
+    </ul>
+  
+     <div id="d2"  class="d-flex flex-wrap" style="width: 50%; padding: 2px;"> </div>
+      <div id="d3" style="border: 1px;"> </div>
+      <div id="d4"></div>
+</div>  
+    <body>
+       
+        <script>
+            var category
+            var card;
+            var det;
+           axios.get("https://fakestoreapi.in/api/products/category").then(function(res){
+            // console.log(res)
+            category=res.data.categories
+               ab()
+            
+            })
+            // console.log(category)
+            function ab(){
+              category.forEach(function(s){
+                var d=document.createElement("li")
+                d.style.padding=30
+                d.innerHTML=s
+            
+               document.getElementById("d1").appendChild(d)
+               
+               d.onclick=function(){
+              
+                axios.get("https://fakestoreapi.in/api/products/category?type="+s).then(function(resp){
+                      card=resp.data.products
+                    //   console.log(card)
+                  
+                        
+                         sre()
+                    
+
+                })
+            }
+            })
+                
+        }
+          function sre(){
+            document.getElementById("d2").innerHTML=" "
+
+            card.forEach(function(f){
+                var y=document.createElement("div")
+                y.style.width="30%"
+                y.style.border="1px solid"
+                y.style.padding="35px"
+                y.style.backgroundColor="pink"
+                 y.style.margin="4px" 
+                 y.onclick=function(){
+                  axios.get("https://fakestoreapi.in/api/products/"+f.id).then(function(res){
+                    det=res.data.product
+                     
+                    ss()
+
+                  })
+                 
+                }
+                 
+                var b=document.createElement("h6")
+                b.innerHTML=f.brand
+                y.appendChild(b)
+ 
+                var l=document.createElement("h6")
+                 var i=document.createElement("img")
+                    i.src=f.image
+                    i.style.width="50%"
+                    // i.style.border="5px "
+
+                    i.appendChild(l)
+                y.appendChild(l)
+                y.appendChild(i)
+             
+                 var d=document.createElement("h6")
+                 d.innerHTML=f.model
+                 y.appendChild(d)
+                
+                   
+                 var n=document.createElement("h6")
+                 n.innerHTML=f.price
+
+                 y.appendChild(n)
+
+                 var x=document.createElement("h6")
+                 x.innerHTML=f.brand
+                y.appendChild(x)
+
+               document.getElementById("d2").appendChild(y)
+               
+               
+            })
+          }
+             function ss(){
+               document.getElementById("d3").innerHTML=" "
+              
+                var k=document.createElement("div")
+                k.style.width='280px'
+                k.style.border="1px solid"
+                k.style.backgroundColor="orange"
+                k.style.margin="10"
+                k.style.padding="10"
+
+
+
+                var r=document.createElement("h4")
+                 var i=document.createElement('img')
+                 i.src=det.image
+                 i.style.width="250px"
+                 i.appendChild(r)
+                 k.appendChild(i)
+
+
+
+                var g=document.createElement("h4")
+                g.innerHTML="model:"+det.model
+                k.appendChild(g)
+                
+                var m=document.createElement("h4")
+                m.innerHTML="brand:"+det.brand
+                k.appendChild(m)
+                
+                var x=document.createElement("h4")
+                x.innerHTML="price:"+det.price
+                k.appendChild(x)
+              
+                document.getElementById("d3").appendChild(k)
+                
+
+             }
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+
+
+                   
+
+
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head> print ordered and unordered lists
+        <body>
+            <h1>welcome to the edupoly</h1>
+            <ul id="d1">
+
+            </ul>
+            <ol id="d2"></ol>
+            <script>
+                var ar=['surendra','kumar','virat','kohli']
+                  ar.forEach(function(b){
+                    var r=document.createElement("li")
+                     r.innerHTML=b;
+                    document.getElementById("d1").appendChild(r)
+                  })
+                  var br=['surendra','kumar','virat','kohli']
+                  br.forEach(function(c){
+                    var s=document.createElement("li")
+                     s.innerHTML=c;
+                    document.getElementById("d2").appendChild(s)
+                  })
+
+
+                 
+            </script>
+        </body>
+    </head>
+</html>

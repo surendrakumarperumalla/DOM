@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+
+<body>
+    <input type="text" id="d3">
+      <button id="d1" onclick="abc()">add students</button>
+      <ul id="d2">
+
+      </ul>
+
+    <script>
+        //  var ar=[]
+      
+        function abc(){
+            var r=document.getElementById("d3")
+            var t=document.getElementById("d2")
+            var a=document.createElement("li")
+            a.innerHTML=r.value
+            t.appendChild(a)
+            //  ar.push(r)
+            //  console.log(ar)
+        }
+        
+
+
+    </script>
+</body>
+</html>

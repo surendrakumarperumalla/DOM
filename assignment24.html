@@ -1,0 +1,44 @@
+<html>
+    <head>
+
+</head>
+<div style="text-align: center;">
+ <h1 style="color: green;">showing images using url</h1>
+  <input type="text" id="d1" >
+  <button onclick="rrg()" id="d2" style="background-color: blue;color: white;">add images</button>
+</div>
+<div id="d3"></div>
+<body>
+    <script>
+        var ar=[]
+        function der(){
+        document.getElementById("d3").innerHTML=""
+        ar.forEach(function(s){
+            var g=document.createElement("img")
+            g.style.width="20%"
+            g.src=s
+            document.getElementById("d3").appendChild(g)
+
+            var k=document.getElementById("d1")
+             k.src=s
+
+        })
+      
+         
+        }
+        function rrg(){
+            var l=document.getElementById("d1")
+             var z=l.value
+             ar.push(z)
+             der()
+             l.value=""
+
+  
+         }
+
+
+
+
+    </script>
+</body>
+</html>

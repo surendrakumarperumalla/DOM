@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+  
+    <body>
+        <h1 style= color:blue>change button background color on click</h1>
+        <button id="d1" onclick="changecolor()" style="text-align: center">green </button>
+        <script>
+           
+            var d=document.getElementById("d1")
+             d.style.backgroundColor="green"
+             function changecolor(){
+             if(d.style.backgroundColor==="green")
+             {
+                d.style.backgroundColor="red"
+              d.innerHTML="red"
+              d.style.color="white"
+             }
+             else
+             {
+                 d.style.backgroundColor="green"
+                 d.innerHTML="green"
+                 d.style.color="white"
+              }
+           
+
+            }
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <input type="text">
+    <button onclick="ss()">show</button>
+    <ul id="d1"></ul>
+    <body>
+        
+        
+        <script>
+            var ar=['surendra','virat','rohit','dhoni']
+               ar.forEach(function(s,i){
+                var b=document.createElement("li")
+                b.innerHTML=s;
+                var v=document.createElement("button")
+                v.innerHTML="del"
+                b.appendChild(v)
+
+                b.onclick=function(){
+                    alert(i)
+
+                }
+    
+                
+                document.getElementById('d1').appendChild(b)
+
+
+
+              })
+
+        </script>
+    </body>
+</html>

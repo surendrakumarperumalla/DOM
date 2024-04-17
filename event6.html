@@ -1,0 +1,43 @@
+<html>
+    <head>
+       
+
+    </head>
+    <body>
+        <input type="text" id="d2">
+        <button onclick="show()">add students</button>
+        <ul id="d1"></ul>
+        <script>
+            var students=['surya','kumar','yadav','rohit','sharma']
+           
+            function event(){
+                document.getElementById("d1").innerHTML=""
+             students.forEach(function(g,i){
+            var f=document.createElement("li")
+            f.innerHTML=g;
+            var t=document.createElement("button")
+            t.innerHTML="delete"
+            t.onclick=function as(){
+                students.splice(i,1)
+                event()
+                }
+                f.appendChild(t)
+            document.getElementById("d1").appendChild(f)
+
+            }) 
+        }
+        event()
+               function show(){
+                var n=document.getElementById("d2").value
+                 students.push(n)
+                 event()
+                 console.log(students)
+               }
+               
+              
+
+            
+
+        </script>
+    </body>
+    </html>

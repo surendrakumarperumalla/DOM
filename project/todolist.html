@@ -1,0 +1,77 @@
+<html>
+    <head>
+
+    </head>
+    
+    <input type="text"  id="d1">
+    <button onclick="ab()">ADD TEXT</button>
+    <ul id="d4"></ul>
+    <body>
+
+        <script>
+            var ar=[]
+            function ab(){
+              
+
+                var x=document.getElementById("d1").value
+                ar.push(x)
+
+                var v=document.createElement("li")
+                 v.innerHTML=x
+                 var c=document.createElement("button")
+                  c.innerHTML="edit"
+                  c.onclick=function(a){
+                    console.dir(a)
+                  }
+                
+                  v.appendChild(c)
+                  var h=document.createElement("button")
+                  h.innerHTML="done"
+                 
+                  h.onclick=function df(e)
+                  {
+                        v.style.color="green"
+                        e.target.style.display="none"
+                        e.target.previousSibling.style.display="none"
+                        // console.dir(e)
+                        var f=document.createElement("button")
+                        f.innerHTML="del"
+                        v.appendChild(f)
+                        f.onclick=function dd(ss){
+                            console.dir(ss.target)
+                            ss.target.parentElement.style.display="none"
+
+                        }
+
+
+                      
+
+
+
+                   }
+                    v.appendChild(h)
+                    
+                document.getElementById("d4").appendChild(v)
+               
+                
+
+                  }
+
+                    
+                   
+
+
+
+                
+
+                
+                  
+          
+              
+            
+
+            
+
+        </script>
+    </body>
+</html>

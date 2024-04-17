@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <body> 
+            <h1>welcome to edupoly</h1>
+            <ul id="d1">
+
+            </ul>
+            <script>
+                var el=document.createElement("h3")
+                el.innerHTML="welcome to dom"
+                document.body.appendChild(el)
+
+                var bv=document.createElement("h4")
+                bv.innerHTML="part of js"
+                document.body.appendChild(bv)
+
+
+
+
+                     var ar=['surendra','jagadeesh','anil','siva','lakshman','dinesh','vinay','subbu']
+                          ar.forEach(function(a){
+                            var se=document.createElement("li")
+                            se.innerHTML=a;
+                            document.getElementById("d1").appendChild(se)
+                          })  
+                         
+                    
+                          
+            </script>
+            
+
+        
+        </body>
+    </head>
+</html>

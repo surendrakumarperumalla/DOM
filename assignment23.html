@@ -1,0 +1,30 @@
+<html>
+    <head>
+    </head>
+<body>
+    <h1 style="color: red; text-align: center;">showing images using url</h1>
+    <div style="text-align: center;">
+        <h3 id="d4"> Enter image url:<input type= "text" id="i1"></h3>
+        <button style="background-color: blueviolet;" onclick="add()">Add image</button>
+    </di>
+    <div >
+        <img style="width: 300px;" id="d1"  src="" alt="">
+       
+    </div>
+    
+      
+   
+    <script>
+        function add(){
+            var a=document.getElementById("i1")
+            var b=document.getElementById("d1")
+    
+            b.src=a.value 
+           
+        }
+       
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <body>
+            <!-- <h1 id="d1">surendra</h1>
+            <h2 id="d1">kumar</h2> -->
+        <!-- <div id="d1"></div> -->
+           <ol id="d1" style="border: 1px solid rgb(255, 0, 51); width: 60px; border-radius: 20px; background-color: rgb(255, 247, 0);" ></ol>
+           <ul id="d2" style="border: 1px solid rgb(0, 255, 68); width: 60px; border-radius: 20px; background-color: rgb(255, 0, 72);"></ul>
+        <script>
+            // var Elementh=document.getElementById("d1");
+            // console.log(Elementh)
+            // console.dir(Elementh)
+
+
+            //   var Elementh=document.getElementById("d1")
+            //   Elementh.innerHTML="surya";
+            //   console.log(Elementh.innerHTML)
+
+            //  var x=document.createElement("h1")
+            //  x.innerHTML="hello edupoly";
+            //  document.getElementById("d1").appendChild(x)
+            //   var y=document.createElement("h2")
+            //   y.innerHTML="hello"
+            //   document.getElementById("d1").appendChild(y)
+                 
+               var cities=['hyd','vjy','vzg','ttd']
+               cities.forEach(function(a){
+                var c=document.createElement("li")
+                c.innerHTML=a;
+                c.style.color="green"
+                document.getElementById("d1").appendChild(c)
+               })  
+                cities.forEach(function(a){
+                var c=document.createElement("li")
+                c.innerHTML=a;
+                c.style.color="white"
+                document.getElementById("d2").appendChild(c)
+               })
+
+
+
+        </script>
+        </body>
+    </head>
+</html>

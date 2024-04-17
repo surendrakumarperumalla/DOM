@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <h1 onclick="event()">virat kohli</h1>
+        <p>He is a right-handed batsman and an occasional medium-fast bowler. He currently represents Royal Challengers Bengaluru in the IPL and Delhi in domestic cricket </p>
+        <h1 onclick="event()">rohit sharma</h1>
+        <p>- Rohit Sharma has won six IPL titles: one with Deccan Chargers and five as captain of Mumbai Indians (MI), making him the joint most successful captain</p>
+        <h1 on click="event()">ms dhoni</h1>
+        <p>Mahendra Singh Dhoni is an Indian professional cricketer. He is a right handed batter and a wicket-keeper. Widely regarded as one of the most prolific </p>
+        <h1 onclick="event()"> kl rahul</h1>
+        <p>Kannanur Lokesh Rahul is an Indian international cricketer. A right-handed wicket-keeper and batsman, Rahul plays for Karnataka at the domestic level</p>
+        <h1 onclick="event()">jasprit Bumrah</h1>
+        <P> Jasprit Bumrah is one of the key players in Mumbai Indians' (MI) rise to becoming five-time champions in the Indian Premier League (IPL).</P>
+        <script>
+            document.querySelectorAll("h1").forEach(function(el){
+                el.onclick=function(el){
+                        console.log(el)
+                }
+            
+                document.querySelectorAll("p").forEach(function(el){
+                    el.style.display="none"
+            })
+        })
+
+                
+                
+            
+
+        
+
+
+
+
+        </script>
+    </body>
+</html>

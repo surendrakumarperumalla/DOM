@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <h1>change background color of box using button</h1>
+        <style>
+        #d1{
+            border: 2px solid;
+            width: 200px;
+            height: 200px;
+           
+          }
+    </style>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <button id="r1" onclick="on()">ON</button>
+        <button id="r2" onclick="off()">OFF</button>
+        <script>
+            function on(){
+               document.getElementById("d1").style.backgroundColor="green" 
+               document.getElementById("r1").style.backgroundColor="red"
+               document.getElementById("r2").style.backgroundColor="white"
+            }
+            function off(){
+                document.getElementById("d1").style.backgroundColor="white" 
+                document.getElementById("r2").style.backgroundColor="red"
+                document.getElementById("r1").style.backgroundColor="white"
+            
+            
+            }
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

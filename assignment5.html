@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+        <table border="2px" cellpadding="2"cellspacing=5px style="border: 2px solid black;" >
+            <thead>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>city</th>
+                <th>salary</th>
+                <th>image</th>
+            </thead>
+            <tbody id="d1">
+
+            </tbody>
+            
+
+        </table>
+        <body>
+            
+            <script>
+                
+    var people = [
+{
+"firstname": "praveen",
+"lastname": "gubbala",
+"age": 36,
+"gender": "male",
+"city": "hyd",
+"salary": 10000
+},
+{
+"firstname": "srikanth",
+"lastname": "gubbala",
+"age": 32,
+"gender": "male",
+"city": "bengaluru",
+"salary": 20000
+},
+{
+"firstname": "pradeep",
+"lastname": "reddy",
+"age": 21,
+"gender": "male",
+"city": "hyd",
+"salary": 25000
+}];
+  people.forEach(function(s){
+   var ntr=document.createElement("tr")
+
+   ftd=document.createElement("td")
+   ftd.innerHTML=s.firstname
+   
+
+   ltd=document.createElement("td")
+   ltd.innerHTML=s.lastname
+
+
+   atd=document.createElement("td")
+   atd.innerHTML=s.age
+
+   gtd=document.createElement("td")
+   gtd.innerHTML=s.gender
+
+   ctd=document.createElement("td")
+   ctd.innerHTML=s.city
+
+   std=document.createElement("td")
+   std.innerHTML=s.salary
+
+   itd=document.createElement("td")
+   iconel=document.createElement("i")
+   itd.appendChild(iconel)
+   iconel.classList.add("bi", "bi-person-standing","display-1")
+
+   ntr.appendChild(ftd) 
+   ntr.appendChild(ltd) 
+   ntr.appendChild(atd) 
+   ntr.appendChild(gtd) 
+   ntr.appendChild(ctd) 
+   ntr.appendChild(std) 
+   ntr.appendChild(itd)
+   
+
+//    console.log(ntr)
+   document.getElementById("d1").appendChild(ntr)
+
+
+
+  })
+
+
+
+            </script>
+        </body>
+    </head>
+</html>
