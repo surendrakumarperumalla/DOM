@@ -1,0 +1,83 @@
+<html>
+    <head>
+
+    </head>
+    <body style="text-align: center;">
+        <h1 style="color: red;">Add contact cards</h1>
+    <div style='margin: 30px;'>
+        <span style="color: red;">NAME:</span><input type="text"  id="d6" >
+    </div >
+    <div style="margin: 30px;"> 
+        <span style="color:red">Number:</span><input type="text" id="d1">
+    </div>
+    <div style="margin: 30px;"> 
+        <span style="color: red;">Email:</span><input type="text" id="d2">
+    </div>
+    <div style="margin: 30px;"> 
+        <span style="color: red;">Enter image url:</span><input type="text" id="d3">
+    </div>
+         <button onclick="ab()" style="background-color: rgb(232, 122, 19); color: antiquewhite;">add contacts</button>  
+
+<div id="d4" ></div>     
+        <script>
+
+            var ar=[]
+            function ab(){
+                  document.getElementById("d4").innerHTML=" "
+                var x=document.getElementById("d6").value
+                ar.push(x)
+                var y=document.getElementById("d1").value
+                ar.push(y)
+                var z=document.getElementById("d2").value
+                ar.push(z)
+                var r=document.getElementById("d3").value
+                ar.push(r)
+               console.log(ar)
+                
+            var a=document.createElement("div")
+            a.style.width="20%"
+             
+            a.style.height="40%"
+            a.style.border='2px solid red'
+            a.style.backgroundColor="pink"
+            var d=document.createElement("img")
+            d.src=r
+            d.style.width="40%"
+            d.style.height="40%"
+            d.style.borderRadius="50%"
+
+            var e=document.createElement("h3")
+            e.appendChild(d)
+            a.appendChild(d)
+
+
+            var b=document.createElement("h3")
+            b.innerHTML="NAME:"+x
+            a.appendChild(b)
+
+            var c=document.createElement("h3")
+            c.innerHTML="NUMBER:"+y
+            a.appendChild(c)
+            
+
+            var d=document.createElement("h3")
+            d.innerHTML="EMAIL:"+z
+            a.appendChild(d)
+
+             
+          
+           
+
+
+             document.getElementById("d4").appendChild(a)
+            }
+            //   document.getElementById("d4").appendChild(x)
+            //   document.getElementById("d4").appendChild(y)
+            //   document.getElementById("d4").appendChild(z)
+            //   document.getElementById("d4").appendChild(r)
+
+
+        </script>
+    </body>
+
+</html>
